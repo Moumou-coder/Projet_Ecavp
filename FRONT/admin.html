@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="eCAVP/FRONT/font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+<!-- Fixed navbar -->
+<!--TODO il faut arranger le "NOM" il peut pas supporter plus de 4 char-->
+<nav class="navbar navbar-dark bg-dark">
+    <img src="img/helbLogoMini.png" alt="" style="height: 80px;">
+    <span id="boubou">Admin</span>
+    <button type="button" class="btn btn-light"><a href="connexion.html">deconnexion</a></button>
+</nav>
+
+<!--tableau des CAVP-->
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">id étudiant</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">BAC</th>
+            <th scope="col">Voir CAVP</th>
+            <th> Valider</th>
+            <th> Refuser</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Mekchouche</td>
+            <td>Abdel</td>
+            <td>BAC2</td>
+            <td><a href="#">voir CAVP</a></td>
+            <!--        ce button une fois cliquer va envoyer une requete à la db pour le cavp courant et l'indiquer comme valide-->
+            <th>
+                <button type="button" class="valid btn btn-secondary">Valider</button>
+            </th>
+            <th>
+                <button type="button" class="invalid btn btn-secondary">Refuser</button>
+            </th>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Melhaoui</td>
+            <td>Mouad</td>
+            <td>BAC2</td>
+            <td><a href="#">voir CAVP</a></td>
+            <th>
+                <button type="button" class="valid btn btn-secondary">Valider</button>
+            </th>
+            <th>
+                <button type="button" class="invalid btn btn-secondary">Refuser</button>
+            </th>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Chillah</td>
+            <td>Younes</td>
+            <td>BAC2</td>
+            <td><a href="#">voir CAVP</a></td>
+            <th>
+                <button type="button" class="valid btn btn-secondary">Valider</button>
+            </th>
+            <th>
+                <button type="button" class="invalid btn btn-secondary">Refuser</button>
+            </th>
+        </tr>
+
+
+        </tbody>
+    </table>
+</div>
+<script src="jquery.min.js"></script>
+<!--<script src="/node_modules/jquery/dist/jquery.js"></script>-->
+<script>
+
+
+    getValidInfo();
+    getInvalidInfo();
+
+
+    // permet de récupérer les informations d'une row quand le bouton Valider est cliqué
+    function getValidInfo() {
+
+        $('.table tbody').on('click', '.valid ', function () {
+            var currow = $(this).closest('tr');
+            var idStudent = currow.find('td:eq(0)').text();
+            var lnameStudent = currow.find('td:eq(1)').text();
+            var fNameStudent = currow.find('td:eq(2)').text();
+            var bac = currow.find('td:eq(3)').text();
+            var result = idStudent + '\n' + lnameStudent + '\n' + fNameStudent + '\n' + bac; // DEBUG
+
+            alert(result);
+        })
+    }
+
+    // permet de récupérer les informations d'une row quand le bouton Refuser est cliqué
+    function getInvalidInfo() {
+        $('.table tbody').on('click', '.invalid ', function () {
+            var currow = $(this).closest('tr');
+            var idStudent = currow.find('td:eq(0)').text();
+            var lnameStudent = currow.find('td:eq(1)').text();
+            var fNameStudent = currow.find('td:eq(2)').text();
+            var result = idStudent + '\n' + lnameStudent + '\n' + fNameStudent; // DEBUG
+
+            alert(result);
+        })
+    }
+
+
+</script>
+</body>
+</html>

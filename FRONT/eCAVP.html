@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+</head>
+
+<title>eCAVP</title>
+
+<body>
+<!-- Fixed navbar -->
+<!--TODO il faut arranger le "NOM" il peut pas supporter plus de 4 char-->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <img src="img/helbLogoMini.png" alt="" style="height: 80px;">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <span class="nav-link" href="#" style="font-weight: bold; font-size: 25px;">Moumou </span>
+            </li>
+        </ul>
+    </div>
+    <button type="button" class="btn btn-light"><a href="connexion.html">deconnexion</a></button>
+</nav>
+<!-- fin de la nav -->
+
+<div class="cadre">
+    <!-- checkbox -->
+    <div class="checkQuadri">
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="quad1">
+            <label class="custom-control-label" for="quad1">Quadrimestre 1</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="quad2">
+            <label class="custom-control-label" for="quad2">Quadrimestre 2</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="quad3">
+            <label class="custom-control-label" for="quad3">Quadrimestre 3</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="quad4">
+            <label class="custom-control-label" for="quad4">Quadrimestre 4</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="quad5">
+            <label class="custom-control-label" for="quad5">Quadrimestre 5</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="quad6">
+            <label class="custom-control-label" for="quad6">Quadrimestre 6</label>
+        </div>
+    </div>
+    <!-- tableau du CAVP -->
+    <div class="formCAVP">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">id cours</th>
+                <th scope="col">Quadrimestre</th>
+                <th scope="col">Nom de l'unité de l'enseignement</th>
+                <th scope="col">Nom du cours</th>
+                <th scope="col">nombres d'heures du cours</th>
+                <th scope="col">ECTS</th>
+                <th><input type="checkbox"></th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>4</td>
+                <td>UE 3-1 Le web et ses technologies</td>
+                <td>english for the web</td>
+                <td>26</td>
+                <td onmouseover="alertMe()">5</td>
+                <th><input type="checkbox" id="cours1" name="cours1" value="englishForWeb"></th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>UE 3-2 programmation III</td>
+                <td>JAVA II</td>
+                <td>39</td>
+                <td onmouseover="alertMe()">5</td>
+
+                <th><input type="checkbox" id="cours2" name="cours2" value="JAVAII"></th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>3</td>
+                <td>UE 3-1 Le web et ses technologies</td>
+                <td>english for the web</td>
+                <td>26</td>
+                <td onmouseover="alertMe()">5</td>
+
+                <th><input type="checkbox" id="cours3" name="cours3" value="englishForWeb"></th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>4</td>
+                <td>UE 3-1 Le web et ses technologies</td>
+                <td>english for the web</td>
+                <td>26</td>
+                <td onmouseover="alertMe()">5</td>
+                <th><input type="checkbox" id="cours4" name="cours1" value="englishForWeb"></th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>UE 3-2 programmation III</td>
+                <td>JAVA II</td>
+                <td>39</td>
+                <td onmouseover="alertMe()">5</td>
+
+                <th><input type="checkbox" id="cours5" name="cours2" value="JAVAII"></th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>3</td>
+                <td>UE 3-1 Le web et ses technologies</td>
+                <td>english for the web</td>
+                <td>26</td>
+                <td onmouseover="alertMe()">5</td>
+
+                <th><input type="checkbox" id="cours6" name="cours3" value="englishForWeb"></th>
+            </tr>
+
+            </tbody>
+        </table>
+        <div>
+            <button type="button" class="invalid btn btn-secondary" style="margin: 100px 50px 0 350px;">Visualiser</button>
+            <button type="button" class="invalid btn btn-secondary" style="margin-top: 100px;">Envoyer</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script>
+    function alertMe() {
+        alert("ce cours est lié par un prérequis");
+    }
+</script>
+</body>
+</html>
